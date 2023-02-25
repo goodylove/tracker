@@ -24,7 +24,7 @@ const AddTransaction = () => {
           <input
             type="text"
             placeholder="Enter amount"
-            onChange={() => setAmount(e.target.value)}
+            onChange={(e) => setAmount(e.target.value)}
             value={amout}
           />
         </div>
