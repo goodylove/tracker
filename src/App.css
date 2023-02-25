@@ -105,3 +105,10 @@ p{
     color: white;
   
 }
+.delete-btn{
+  background-color: rgb(242, 99, 99);
+  opacity: 0;
+}
+.delete-btn:hover{
+  opacity: 1;
+}
