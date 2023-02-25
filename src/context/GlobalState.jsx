@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import React, { useReducer, createContext } from "react";
 import AppReducer from "./AppReducer";
 
@@ -13,10 +14,18 @@ export const GlobalContext = createContext(intialState);
 
 const GlobalContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, intialState);
+
+  const deleteTransaction = (id) => {
+    dispatch({
+      type: "DELETE_TRANSACTION",
+      payload: id,
+    });
+  };
   return (
     <GlobalContext.Provider
       value={{
         transaction: state.transaction,
+        deleteTransaction,
       }}
     >
       {children}

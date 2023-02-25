@@ -12,23 +12,24 @@ const IncomeBalance = () => {
     .reduce((acc, amount) => (acc += amount), 0)
     .toFixed(2);
   // expense
-  const expense = amount
-    .filter((amount) => amount < 0)
-    .reduce((acc, amount) => (acc += amount), 0)
-    .toFixed(2);
+  const expense = (
+    amount
+      .filter((amount) => amount < 0)
+      .reduce((acc, amount) => (acc += amount), 0) * -1
+  ).toFixed(2);
 
   return (
     <div className="inc-exp-container">
       <div className="income">
         <h4>INCOME</h4>
         <p id="money-plus" className="money plus">
-          $0.00
+          ${income}
         </p>
       </div>
       <div className="exp">
         <h4>EXPENSE</h4>
         <p id="money-minus" className="money minus">
-          $0.00
+          ${expense}
         </p>
       </div>
     </div>
