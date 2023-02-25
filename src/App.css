@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: cadetblue;
+  background: lightslategrey;
     color: white;
     padding: 1rem;
     border-radius: 10px;
@@ -62,7 +62,7 @@ p{
 #transaction-list{
   position: relative;
   display: flex;
-  margin: 3px 0;
+  margin: 5px 0;
     justify-content: space-between;
     /* border-right: 2px solid red; */
     padding: 6px 1px;

@@ -1,5 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
+
 const IncomeBalance = () => {
+  const { transaction } = useContext(GlobalContext);
+
+  const amount = transaction.map((transaction) => transaction.amount);
+
+  // income balance
+  const income = amount
+    .filter((amount) => amount > 0)
+    .reduce((acc, amount) => (acc += amount), 0)
+    .toFixed(2);
+  // expense
+  const expense = amount
+    .filter((amount) => amount < 0)
+    .reduce((acc, amount) => (acc += amount), 0)
+    .toFixed(2);
+
   return (
     <div className="inc-exp-container">
       <div className="income">

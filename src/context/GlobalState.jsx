@@ -3,10 +3,10 @@ import AppReducer from "./AppReducer";
 
 const intialState = {
   transaction: [
-    { id: 1, text: "flower", amount: 300 },
-    { id: 2, text: "malt", amount: -200 },
-    { id: 3, text: "clothes", amount: -300 },
-    { id: 4, text: "cash", amount: 300 },
+    { id: 1, text: "flower", amount: -20 },
+    { id: 2, text: "malt", amount: +300 },
+    { id: 3, text: "clothes", amount: -10 },
+    { id: 4, text: "cash", amount: +150 },
   ],
 };
 export const GlobalContext = createContext(intialState);
