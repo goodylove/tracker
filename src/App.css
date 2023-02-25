@@ -4,13 +4,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: cadetblue;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    width: auto;
+  height: 100vh
 }
+
+
 .inc-exp-container{
   display: flex;
   justify-content: space-around;
   background-color:white;
     padding: 0 10px ;
   align-items: center;
+  color: #000;
   width: 190px;
   font-size: 13px;
   margin-top: 14px;
@@ -86,4 +95,13 @@ p{
     text-align: start;
     border-bottom: 1px solid rgb(200, 196, 196);
 
+}
+.btn{
+  width: 207px;
+    padding: 5px;
+    background-color: mediumpurple;
+    border: none;
+    border-radius: 2px;
+    color: white;
+  
 }
